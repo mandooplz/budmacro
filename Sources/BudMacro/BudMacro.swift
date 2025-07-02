@@ -1,10 +1,10 @@
 
 
 
-// names를 어떻게 작성하는가.
-// 클래스의 이름을 어떻게 추출하는가. 
+// named: 매크로로 생성되는 이름?
 @attached(member, names: arbitrary)
-@attached(peer, names: suffixed(name))
+@attached(peer, names: suffixed(Manager))
+@attached(extension)
 public macro ClientObject() = #externalMacro(module: "BudMacroCore", type: "ClientObjectMacro")
 
 
