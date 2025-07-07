@@ -5,6 +5,6 @@
 @attached(member, names: arbitrary)
 @attached(peer, names: suffixed(Manager))
 @attached(extension)
-public macro ClientObject() = #externalMacro(module: "BudMacroCore", type: "ClientObjectMacro")
+public macro FirebaseData() = #externalMacro(module: "BudMacroCore", type: "FirebaseDataMacro")
 
 

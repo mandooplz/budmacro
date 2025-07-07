@@ -6,6 +6,3 @@ protocol SampleProtocol {
     var name: String { get }
     var age: Int { get }
 }
-
-@ClientObject
-final class Mandoo { }
