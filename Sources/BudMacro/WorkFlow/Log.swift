@@ -19,7 +19,7 @@ public struct Log: Sendable {
                         _ workflow: WorkFlow.ID = WorkFlow.id,
                         _ routine: String = #function) -> String {
         if let description {
-            return "[\(workflow)] ✅ \(self.objectName).\(routine) success(\(description))"
+            return "[\(workflow)] ✅ \(self.objectName).\(routine) success\n\(description)"
         } else {
             return "[\(workflow)] ✅ \(self.objectName).\(routine) success"
         }
@@ -30,16 +30,13 @@ public struct Log: Sendable {
                         _ workflow: WorkFlow.ID = WorkFlow.id,
                         _ routine: String = #function) -> String {
         if let description {
-            return "[\(workflow)] ⚠️ \(self.objectName).\(routine) failure(\(description))"
+            return "[\(workflow)] ⚠️ \(self.objectName).\(routine) failure\n\(description)"
         } else {
             return "[\(workflow)] ⚠️ \(self.objectName).\(routine) failure"
         }
     }
-    public func failure(_ error: Error,
-                        _ workflow: WorkFlow.ID = WorkFlow.id,
-                        _ routine: String = #function) -> String{
-        return self.failure(error.localizedDescription, workflow, routine)
-    }
+    
+    
     
     
     // MARK: Critical
@@ -47,7 +44,7 @@ public struct Log: Sendable {
                          _ workflow: WorkFlow.ID = WorkFlow.id,
                          _ routine: String = #function) -> String {
         if let description {
-            return "[\(workflow)] ❌ \(self.objectName).\(routine) critical(\(description))"
+            return "[\(workflow)] ❌ \(self.objectName).\(routine) critical\n\(description)"
         } else {
             return "[\(workflow)] ❌ \(self.objectName).\(routine) critical"
         }

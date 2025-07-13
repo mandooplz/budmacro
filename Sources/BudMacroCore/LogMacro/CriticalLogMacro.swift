@@ -20,3 +20,6 @@ public struct CriticalLogMacro: ExpressionMacro {
             return "logger.fault(\"\\(log.critical(\(argument)))\")"
     }
 }
+
+
+

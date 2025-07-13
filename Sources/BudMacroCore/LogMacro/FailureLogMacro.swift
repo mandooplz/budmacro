@@ -21,3 +21,6 @@ public struct FailureLogMacro: ExpressionMacro {
             return "logger.error(\"\\(log.failure(\(argument)))\")"
     }
 }
+
+
+
