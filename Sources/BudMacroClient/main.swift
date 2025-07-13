@@ -1,8 +1,15 @@
 import BudMacro
-import Observation
 import Foundation
 
-protocol SampleProtocol {
-    var name: String { get }
-    var age: Int { get }
+let (logger, log) = WorkFlow.logging(for: "Mandoo")
+
+await WorkFlow {
+    #success
+    #success("Success Reason")
+    
+    #failure
+    #failure("Falure!!")
+    
+    #critical
+    #critical("Citical!!")
 }
