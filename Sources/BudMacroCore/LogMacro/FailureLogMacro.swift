@@ -15,7 +15,7 @@ public struct FailureLogMacro: ExpressionMacro {
     public static func expansion(
         of node: some FreestandingMacroExpansionSyntax,
         in context: some MacroExpansionContext) throws -> ExprSyntax {
-            let argument = node.arguments.first as? String
-            return "logger.error(\"\\(log.failure(\(raw: argument)))\")"
+            let argument = node.arguments.first
+            return "logger.error(\"\\(log.failure(\(argument)))\")"
     }
 }
