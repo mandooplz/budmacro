@@ -12,10 +12,11 @@
 /// ```
 /// // 기본 성공 로그
 /// #success
+/// -> [12345678] ✅ Object.Routine success
 ///
 /// // 추가 정보와 함께 성공 로그
 /// #success("사용자 데이터 동기화 완료")
-/// ```
+/// -> [12345678] ✅ Object.Routine success(사용자 데이터 동기화 완료)
 ///
 /// - Parameter logInfo: (선택 사항) 로그에 포함할 추가적인 정보 문자열입니다.
 @freestanding(expression)
@@ -35,10 +36,11 @@ public macro success(_ logInfo: String? = nil) = #externalMacro(module: "BudMacr
 /// ```
 /// // 기본 실패 로그
 /// #failure
+/// -> [12345678] ⚠️ Object.Routine failure
 ///
 /// // 실패 원인과 함께 로그
 /// #failure("네트워크 연결 시간 초과")
-/// ```
+/// -> [12345678] ⚠️ Object.Routine failure(네트워크 연결 시간 초과)
 ///
 /// - Parameter logInfo: (선택 사항) 로그에 포함할 실패 원인 또는 추가 정보 문자열입니다.
 @freestanding(expression)
@@ -57,9 +59,11 @@ public macro failure(_ logInfo: String? = nil) = #externalMacro(module: "BudMacr
 /// ```
 /// // 기본 심각한 오류 로그
 /// #critical
+/// -> [12345678] ❌ Object.Routine critical
 ///
 /// // 오류에 대한 상세 정보와 함께 로그
 /// #critical("데이터베이스 파일 손상 감지")
+/// -> [12345678] ❌ Object.Routine critical(데이터베이스 파일 손상 감지)
 /// ```
 ///
 /// - Parameter logInfo: (선택 사항) 로그에 포함할 오류에 대한 상세 정보 문자열입니다.
