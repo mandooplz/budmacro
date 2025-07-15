@@ -15,9 +15,8 @@ import SwiftSyntaxMacros
 public struct BudMacroPlugin: CompilerPlugin {
     public init() { }
     public let providingMacros: [Macro.Type] = [
-        SuccessLogMacro.self,
-        FailureLogMacro.self,
-        CriticalLogMacro.self
+        SuccessLogMacro.self, FailureLogMacro.self, CriticalLogMacro.self,
+        ShowStateMacro.self
     ]
 }
 

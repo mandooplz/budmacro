@@ -41,3 +41,6 @@ final class CriticalLogMacroTests: XCTestCase {
         )
     }
 }
+
+
+

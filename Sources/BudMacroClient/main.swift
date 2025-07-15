@@ -1,15 +1,8 @@
 import BudMacro
 import Foundation
 
-let (logger, log) = WorkFlow.logging(for: "Mandoo")
-
-await WorkFlow {
-    #success
-    #success("Success Reason")
-    
-    #failure
-    #failure("Falure!!")
-    
-    #critical
-    #critical("Citical!!")
+@ShowState
+struct Mandoo {
+    let name: String
+    let age: Int
 }
