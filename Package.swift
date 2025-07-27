@@ -1,4 +1,4 @@
-// swift-tools-version: 6.2
+// swift-tools-version: 6.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
 import CompilerPluginSupport
@@ -6,7 +6,7 @@ import CompilerPluginSupport
 
 let package = Package(
     name: "BudMacro",
-    platforms: [.macOS(.v26), .iOS(.v26), .tvOS(.v26), .watchOS(.v26), .macCatalyst(.v26)],
+    platforms: [.macOS(.v15), .iOS(.v18)],
     products: [
         // MARK: BudMacro
         .library(
